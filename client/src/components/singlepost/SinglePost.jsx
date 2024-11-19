@@ -1,4 +1,4 @@
-import "../singlepost/singlepost.css"
+import "./singlepost.css"
 
 export default function SinglePost() {
     return (

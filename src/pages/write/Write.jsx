@@ -2,12 +2,12 @@ import "../write/write.css"
 
 export default function Write() {
     return (
-        <div className="writeImg">
-            <img className="" src="https://images.pexels.com/photos/1367105/pexels-photo-1367105.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" />
-            <form className="write">
+        <div className="write">
+            <img className="writeImg" src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
+            <form className="writeForm">
                 <div className="writeFormGroup">
                     <label htmlFor="fileInput">
-                    <i class="writeIcon fa-solid fa-file-circle-plus"></i>
+                        <i className="writeIcon fa-solid fa-file-circle-plus"></i>
                     </label>
                     <input type="file" id="fileInput" style={{display: 'none'}}/>
                     <input type="text" placeholder="Title" className="writeInput" autoFocus={true}/>

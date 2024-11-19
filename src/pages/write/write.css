@@ -9,7 +9,10 @@
     object-fit: cover;
 }
 .writeForm{
+    margin: 10px;
     position: relative;
+    border: none;
+    border-radius: 10px;
 
 }
 .writeFormGroup{
@@ -20,6 +23,7 @@
 .writeIcon{
     width: 25px;
     height: 25px;
+    font-size: 20px;
     border-radius: 50%;
     border: 1px solid ;
     display: flex;
@@ -32,17 +36,21 @@
     font-size: 30px;
     border: none;
     padding: 20px;
-    width: 70vh;
+    width: 70vw;
+    border-bottom: 2px solid gray;
+
 }
 .writeInput:focus{
-    outline: none;
+    outline-style: none;
 }
 .writeText{
     font-size: 20px;
+    height: 70vh;
+    
 }
 .writeSubmit{
     position: absolute;
-    top: 60px;
+    top: 20px;
     right: 50px;
     color: white;
     background-color: teal;
@@ -51,6 +59,8 @@
     border-radius: 10px;
     cursor: pointer;
     font-size: 15px;
+    display: flex;
+    align-items: center;
 
 }
 

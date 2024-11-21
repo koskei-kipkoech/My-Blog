@@ -4,33 +4,25 @@ import Posts from "../../components/posts/Posts";
 import Sidebar from "../../components/sidebar/Sidebar";
 import "./home.css";
 import axios from "axios";
+import { useLocation } from "react-router-dom";
 
 export default function Home() {
     const [posts, setPosts] = useState([]);
-    const [selectedApi, setSelectedApi] = useState("");
-
-    // Function to fetch news articles based on selected API
+    const {search} = useLocation()
     useEffect(() => {
-        const fetchPosts = async () => {
-            if (!selectedApi) return; // If no API selected, do nothing
-            try {
-                const res = await axios.get(selectedApi);
-                setPosts(res.data.articles); // Assuming response contains `articles`
-            } catch (error) {
-                console.error("Error fetching news articles:", error);
-            }
-        };
-        fetchPosts();
-    }, [selectedApi]);
+        const fetchPosts = async () =>{
+            const res = await axios.get("/posts" + search)
+            setPosts(res.data)
+        }
+        fetchPosts()
+    },[search]);
 
     return (
         <>
             <Header />
             <div className="home">
-                <div className="content">
-                    <Posts posts={posts} />
-                </div>
-                <Sidebar setSelectedApi={setSelectedApi} />
+                <Posts posts={posts} />
+                <Sidebar/>
             </div>
         </>
     );

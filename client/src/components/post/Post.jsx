@@ -1,20 +1,26 @@
 import "../post/post.css"
+import {Link} from "react-router-dom"
 
-export default function Post() {
+export default function Post({post}) {
+    const PF = "http://localhost:5000/images/";
     return (
         <div className="post">
-            <img className="postImg" src="https://images.pexels.com/photos/47547/squirrel-animal-cute-rodents-47547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
+            {post.photo && <img className="postImg" src={PF + post.photo} alt=""/>}
             <div className="postInfo">
                 <div className="postCats">
-                    <span className="postCat">Music</span>
-                    <span className="postCat">Life</span>
+                    {post.categories.map((cate) => (
+                        <span className="postCat">{cate.name}</span>
+                    ))}
                 </div>
-                <span className="postTitle">Hello welcome Sports </span>
+                <Link to={`/post/${post._id}`} className="link" >
+                    <span className="postTitle">{post.title}</span>
+                </Link>
+                
                 <hr />
-                <span className="postDate">1hr Ago</span>
+                <span className="postDate">{new Date(post.createdAt).toDateString}</span>
             </div>
             <p className="postDesc">
-                Sport News are widely distributed and available on all platforms and ensure that you dont miss on all sports eventsand upcoming ones. Sport News are widely distributed and available on all platforms and ensure that you dont miss on all sports eventsand upcoming ones. Sport News are widely distributed and available on all platforms and ensure that you dont miss on all sports eventsand upcoming ones.                 Sport News are widely distributed and available on all platforms and ensure that you dont miss on all sports eventsand upcoming ones
+                {post.desc}            
             </p>
         </div>
     )

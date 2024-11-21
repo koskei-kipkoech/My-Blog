@@ -19,20 +19,29 @@ router.post('/register', async (req, res) => {
     }
 });
 //login
-router.post("/login",async (req, res) => {
+router.post("/login", async (req, res) => {
     try {
+        // Check if the user exists
         const user = await User.findOne({ username: req.body.username });
-        !user && res.status(400).json("Wrong Credentials")
+        if (!user) {
+            return res.status(400).json("Wrong Credentials");
+        }
 
+        // Validate the password
         const validPass = await bcrypt.compare(req.body.password, user.password);
-        !validPass && res.status(400).json("Wrong Credentials");
+        if (!validPass) {
+            return res.status(400).json("Wrong Credentials");
+        }
 
-        const {password, ...others} = user._doc
-        res.status(200).json(others);
+        // Successful login
+        const { password, ...others } = user._doc; // Exclude the password from the response
+        return res.status(200).json(others);
     } catch (error) {
-        res.status(500).json(error); 
+        // Handle unexpected server errors
+        return res.status(500).json({ message: error.message });
     }
-})  
+});
 
 
-module.exports = router
+
+module.exports = router;

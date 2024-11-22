@@ -1,0 +1,120 @@
+/* MultiStepForm.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .multi-step-form-container {
+    background: url("https://img.freepik.com/free-photo/cheerful-woman-holding-heart-eyes-emoticon-star-icons_53876-71034.jpg?t=st=1732279780~exp=1732283380~hmac=8e02cc14dc8393dbfe7a1d779142a2fe3b1db3dec34572722568abcdff53871e&w=1380");
+    position: relative;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 2rem 0;
+  }
+  
+  .multi-step-form {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  
+  .multi-step-form h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  .radio-container {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+  }
+  
+  .radio-container div {
+    position: relative;
+  }
+  
+  .radio-container input {
+    display: none;
+    transform: scale(1.1);
+  }
+  
+  
+  .radio-container label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .radio-container input:checked + label {
+    border-color: #4f46e5;
+    color: #4f46e5;
+  }
+  
+  .text-hint {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 0.5rem;
+  }
+  
+  .textarea-container textarea {
+    width: 95%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .textarea-container textarea:focus {
+    border-color: #4f46e5;
+    outline: none;
+  }
+  
+  .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.navigation-buttons button {
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: teal;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .navigation-buttons button:hover {
+    border-color: #4f46e5;
+    background-color: teal;
+    transform: scale(1.1);
+    color: gold;
+  }
+  

@@ -5,6 +5,7 @@ import { Context } from "../../context/Context";
 
 export default function TopBar() {
     const {user, dispatch} = useContext(Context);
+    const PF = "http://localhost:5000/images/";
 
     const handleLogOut = () => {
         dispatch({type: "LOGOUT"});
@@ -22,20 +23,23 @@ export default function TopBar() {
             <div className="topCenter">
                 <ul className="topList">
                     <li className="topListItem" ><Link className="link" to='/'>HOME</Link></li>
-                    <li className="topListItem" ><Link className="link" to='/'>ABOUT</Link></li>
-                    <li className="topListItem" ><Link className="link" to='/'>CONTACT</Link></li>
+                    <li className="topListItem" ><Link className="link" to='/general'>GENERAL</Link></li>
+                    <li className="topListItem" ><Link className="link" to='/about'>ABOUT</Link></li>
+                    <li className="topListItem" ><Link className="link" to='/contact'>CONTACT</Link></li>
                     <li className="topListItem" ><Link className="link" to='/write'>WRITE</Link></li>
                     <li className="topListItem" onClick={handleLogOut} >{user && "LOGOUT"}</li>
                 </ul>
             </div>
             <div className="topRight">
-                {user ? (
-                    <img className="topImg" src={user.profilePic} alt=""/>
+                {user ? (                
+                <Link to="/settings">
+                    <img className="topImg" src={PF + user.profilePic} alt=""/>
+                </Link>
                 ):(
                         <ul className="topList">
                             <li className="topListItem">
                                 <Link className="link" to='/login'>LOGIN</Link>  |  
-                                | <Link className="link" to='/register'>REGISTER</Link>
+                                |  <Link className="link" to='/register'>REGISTER</Link>
                             </li>
                         </ul>
                     )

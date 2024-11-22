@@ -13,12 +13,14 @@
     position: relative;
     border: none;
     border-radius: 10px;
+    justify-self: center;
 
 }
 .writeFormGroup{
     margin-left: 150px;
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 .writeIcon{
     width: 25px;

@@ -22,6 +22,7 @@
     padding: 10px 50px;
     background-color: white;
     border: none;
+    max-width: 80%;
 }
 .registerButton{
     margin-top: 20px;

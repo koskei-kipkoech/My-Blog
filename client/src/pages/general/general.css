@@ -1,0 +1,93 @@
+.app {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background-size: cover;
+    background: url("https://img.freepik.com/free-vector/people-showcasing-different-types-ways-access-news_53876-66060.jpg?t=st=1732284215~exp=1732287815~hmac=93665c61809943f43c58c8f9eab9e0dc698d74af904a3aedcb3a2f9eb411c2f0&w=1380");
+  }
+  
+  .sidebar {
+    width: 150px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+  }
+  
+  .sidebar h3 {
+    margin-top: 0;
+  }
+  
+  .main {
+    flex: 6;
+    margin-right: 20px;
+  }
+  
+  .blog-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .blog-card {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .blog-card h2 {
+    margin-top: 0;
+  }
+  
+  .blog-card p {
+    margin-bottom: 10px;
+  }
+  
+  .blog-card button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .blog-card button:hover {
+    background-color: #2980b9;
+  }
+  
+  .blog-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .blog-card a:hover {
+    text-decoration: underline;
+  }
+  
+  input {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  

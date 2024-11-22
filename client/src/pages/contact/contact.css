@@ -1,0 +1,82 @@
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("https://img.freepik.com/premium-vector/chat-box-5-merge_1162360-3588.jpg?w=1060");
+}
+form{
+    max-width: 800px;
+    width: 100%;
+    background-color: lightgray;
+    padding: 25px 25px 30px;
+    border-radius:10px ;
+    box-shadow: 10px 10px 10px gray;
+    margin: 25px;
+}
+form h2{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 5px 5px 5px gray;
+
+}
+form .input-box{
+    margin-top: 20px;
+}
+form .input-box .field{
+    width: 95%;
+    height: 50px;
+    background: transparent;
+    border:  2px solid #ddd;
+    outline: none;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 15px;
+    color: #333;
+    margin-top: 10px;
+}
+form .input-box .field-mess{
+    height: 150px;
+    width: 95%;
+    margin-top: 5px;
+    resize: none;
+    box-shadow: 10px 10px 10px gray;
+
+}
+form .btn{
+    margin-top: 20px;
+    background-color: teal;
+    color: white;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    align-self: center;
+    border: none;
+    box-shadow: 5px 5px 10px black;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    
+}
+.btn:hover{
+    transition: 0.5s ease-in-out ;
+    transform: scale(1.1);
+}
+
+.rate-us-btn {
+    position: absolute;
+    top: 60px; /* Distance from the top */
+    right: 50px; /* Distance from the right */
+    padding: 10px 20px;
+    background-color: #FF5722; /* Bright orange background */
+    color: white; /* White text */
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.rate-us-btn:hover {
+    background-color: #e64a19; /* Darker orange on hover */
+}
